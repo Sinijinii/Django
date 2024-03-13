@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 선택자 중에 가장 광범위한 영역에 동일한 스타일의 적용이 가능 */
+        *{
+            /* 전체 선택자 */
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        /* 요소(태그) 선택자 */
+        h1 {
+            color: red;
+        }
+        div{
+            background-color: antiquewhite;
+            padding: 20px;
+            border: black 1px solid;
+        }
+        p{
+            color: blue;
+        }
+        .p-import{
+            color: black !important;
+        }
+        /* 클래스 선택자 */
+        .container{
+            width: 1000px;
+            background-color: aliceblue;
+        }
+        /* 자식 선택자와 자손 선택자 */
+        /* 자손 */
+        .container p{
+            color: brown;
+        }
+        /* 자식 */
+        .container > h1{
+            color: chocolate;
+        }
+        
+        /* id선택자 */
+        #p-id{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>웹 디자인 기초</h1>
+    <p>시작해봅시다</p>
+    <div class = "container">
+        <h1>자식 선택자</h1>
+        <p>자식 p tag</p>
+        <div>
+            <h2>자손 선택자</h2>
+            <p>자손 p tag</p>
+            <p class="p-import">나는 중요햄!</p>
+            <p id="p-id">p-id1</p>
+            <p id="p-id">p-id2</p>
+        </div>
+
+
+    </div>
+</body>
+</html>
